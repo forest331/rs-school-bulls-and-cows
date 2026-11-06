@@ -45,4 +45,7 @@ describe('evaluateGuess', () => {
     expect(evaluateGuess('7', '7')).toEqual({ bulls: 1, cows: 0 });
     expect(evaluateGuess('7', '8')).toEqual({ bulls: 0, cows: 0 });
   });
+  it('does not overcount cows for repeated secret digits', () => {
+    expect(evaluateGuess('1112', '2121')).toEqual({ bulls: 1, cows: 2 });
+  });
 });

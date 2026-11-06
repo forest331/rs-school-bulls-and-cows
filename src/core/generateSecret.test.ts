@@ -1,4 +1,3 @@
-import { describe } from 'vitest';
 import { generateSecret } from './generateSecret';
 
 const DIGITS = '0123456789abcdef';

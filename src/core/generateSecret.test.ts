@@ -1,6 +1,5 @@
 import { generateSecret } from './generateSecret';
-
-const DIGITS = '0123456789abcdef';
+import { DIGITS } from './constants';
 
 describe('generateSecret', () => {
   it('returns a string of the requested length', () => {

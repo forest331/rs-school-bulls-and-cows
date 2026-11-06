@@ -18,19 +18,19 @@ describe('createDigitValidator', () => {
     expect(isOctal('8')).toBe(false);
     expect(isOctal('9')).toBe(false);
   });
-  it('accepts 0-9 and rejects 8 for base 10', () => {
-    const isOctal = createDigitValidator(8);
-    '0123456789'.split('').forEach((c) => expect(isOctal(c)).toBe(true));
-    expect(isOctal('d')).toBe(false);
-    expect(isOctal('F')).toBe(false);
-    expect(isOctal('a')).toBe(false);
+  it('accepts 0-9 and rejects hex letters for base 10', () => {
+    const isDecimal = createDigitValidator(10);
+    '0123456789'.split('').forEach((c) => expect(isDecimal(c)).toBe(true));
+    expect(isDecimal('d')).toBe(false);
+    expect(isDecimal('F')).toBe(false);
+    expect(isDecimal('a')).toBe(false);
   });
   it('accepts 0-9 and a-f for base 16', () => {
-    const isOctal = createDigitValidator(8);
-    '0123456789abcdf'.split('').forEach((c) => expect(isOctal(c)).toBe(true));
-    expect(isOctal('g')).toBe(false);
-    expect(isOctal('t')).toBe(false);
-    expect(isOctal('Y')).toBe(false);
+    const isHex = createDigitValidator(16);
+    '0123456789abcdef'.split('').forEach((c) => expect(isHex(c)).toBe(true));
+    expect(isHex('g')).toBe(false);
+    expect(isHex('t')).toBe(false);
+    expect(isHex('Y')).toBe(false);
   });
   it('is case-insensitive for hex letters', () => {
     const isHex = createDigitValidator(16);

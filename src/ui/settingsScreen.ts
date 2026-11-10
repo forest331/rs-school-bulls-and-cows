@@ -40,7 +40,7 @@ export function renderSettingsScreen(handlers: SettingsScreenHandlers): HTMLElem
       refreshLengthAvailability();
     });
     baseRadios.push(input);
-    baseFieldset.append(el('label', { for: `base-${value}` }, [input, ` ${label}`]));
+    baseFieldset.append(el('label', {}, [input, el('span', { text: label })]));
   });
 
   const lengthFieldset = el('fieldset', {}, [el('legend', { text: 'Length' })]);
@@ -58,7 +58,7 @@ export function renderSettingsScreen(handlers: SettingsScreenHandlers): HTMLElem
       selectedLength = value;
     });
     lengthRadios.push(input);
-    lengthFieldset.append(el('label', { for: `length-${value}` }, [input, ` ${value}`]));
+    lengthFieldset.append(el('label', {}, [input, el('span', { text: String(value) })]));
   });
 
   const variantsCount = el('p', { class: 'variants' });

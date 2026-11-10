@@ -1,7 +1,3 @@
-import { createApp } from './ui/app';
+import { createApp } from './ui/app.js';
 
-const app = createApp();
-const root = document.getElementById('app');
-if (root) {
-  app.mount(root);
-}
+createApp().mount(document.body);

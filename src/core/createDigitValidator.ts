@@ -1,4 +1,4 @@
-import { DIGITS } from './constants';
+import { DIGITS } from './constants.js';
 
 export type DigitValidator = (char: string) => boolean;
 

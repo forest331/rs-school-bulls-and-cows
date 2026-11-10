@@ -1,6 +1,6 @@
-import { button, el } from './dom';
-import { countPossibleSecrets } from '../core/countPossibleSecrets';
-import type { GameSettings } from '../core/gameState';
+import { button, el } from './dom.js';
+import { countPossibleSecrets } from '../core/countPossibleSecrets.js';
+import type { GameSettings } from '../core/gameState.js';
 
 const BASES: { label: string; value: number }[] = [
   { label: 'Bin (2)', value: 2 },

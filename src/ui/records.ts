@@ -1,4 +1,4 @@
-import type { GameSettings } from '../core/gameState';
+import type { GameSettings } from '../core/gameState.js';
 
 export type RecordEntry = {
   settings: GameSettings;

@@ -1,5 +1,5 @@
-import { clear, el } from './dom';
-import type { RecordEntry } from './records';
+import { clear, el } from './dom.js';
+import type { RecordEntry } from './records.js';
 
 export function renderRecordsTable(records: readonly RecordEntry[]): HTMLElement {
   const section = el('section', { class: 'records' });

@@ -1,8 +1,8 @@
-import { clear } from './dom';
-import { createGameScreen, type GameScreen } from './gameScreen';
-import { renderSettingsScreen } from './settingsScreen';
-import { renderRecordsTable } from './recordsTable';
-import { addRecord, loadRecords, saveRecords } from './records';
+import { clear } from './dom.js';
+import { createGameScreen, type GameScreen } from './gameScreen.js';
+import { renderSettingsScreen } from './settingsScreen.js';
+import { renderRecordsTable } from './recordsTable.js';
+import { addRecord, loadRecords, saveRecords } from './records.js';
 import {
   addGuess,
   createInitialState,
@@ -10,8 +10,8 @@ import {
   startGame,
   type GameSettings,
   type GameState,
-} from '../core/gameState';
-import { isValidGuess } from '../core/isValidGuess';
+} from '../core/gameState.js'; // добавлено .js
+import { isValidGuess } from '../core/isValidGuess.js';
 
 export type App = {
   mount: (container: HTMLElement) => void;

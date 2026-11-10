@@ -1,6 +1,6 @@
-import { button, clear, el } from './dom';
-import { createDigitValidator } from '../core/createDigitValidator';
-import type { GameState } from '../core/gameState';
+import { button, clear, el } from './dom.js';
+import { createDigitValidator } from '../core/createDigitValidator.js';
+import type { GameState } from '../core/gameState.js';
 
 export type GameScreenHandlers = {
   onGuess: (guess: string) => void;

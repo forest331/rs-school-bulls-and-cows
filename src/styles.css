@@ -229,7 +229,6 @@ button:disabled {
   color: var(--text-main);
   text-align: center;
   letter-spacing: 0.2em;
-  text-transform: uppercase;
   transition: border-color 0.2s ease;
 }
 

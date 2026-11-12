@@ -28,6 +28,7 @@ export function createGameScreen(handlers: GameScreenHandlers): GameScreen {
     type: 'text',
     inputmode: 'text',
     autocomplete: 'off',
+    autocapitalize: 'off',
     spellcheck: 'false',
     placeholder: 'Enter guess',
     class: 'guess-input',
